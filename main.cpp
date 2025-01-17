@@ -1,12 +1,11 @@
 /* Includes */
 #include <cstdint>
 #include <iostream>
-#include "include/main.hpp"
+#include "include/code1_test.hpp"
 
 /* Namespaces */
 
 /* Defines */
-#define MAIN_HEADER_H // Exclude include for now
 
 /* Typedefs */
 
@@ -15,7 +14,7 @@
 /* Function Prototypes */
 
 /* Main Function */
-int main(int argc, char *argv[]) {
-
+int main(void) {
+    test_code();
     return 0;
 }

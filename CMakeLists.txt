@@ -1,14 +1,11 @@
-cmake_minimum_required(VERSION 3.30)
-project(cpp_beginner)
+cmake_minimum_required(VERSION 3.31)
+project(cpp_beginner LANGUAGES CXX)
 
-# Set the C++ standard
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_library(mylib INTERFACE)
+set(HEADER_FILES ../include)
+add_library(mylib src/code1_test.cpp ${HEADER_FILES})
+target_include_directories(mylib PRIVATE ${HEADER_FILES})
 
-aux_source_directory(src DIR_SRCS)
-
-
-# Add the executable
-add_executable(${PROJECT_NAME} ${DIR_SRCS} src/code1.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
